@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@iconify-json/ri': ^1.1.2
   '@slidev/cli': ^0.33.0
   '@slidev/theme-default': '*'
   '@slidev/theme-seriph': '*'
@@ -9,6 +10,9 @@ dependencies:
   '@slidev/cli': 0.33.1
   '@slidev/theme-default': 0.21.2
   '@slidev/theme-seriph': 0.21.2
+
+devDependencies:
+  '@iconify-json/ri': 1.1.2
 
 packages:
 
@@ -51,9 +55,14 @@ packages:
       '@iconify/types': 1.1.0
     dev: false
 
+  /@iconify-json/ri/1.1.2:
+    resolution: {integrity: sha512-qLlDrpkxJi+aUxY2xipKC08aI2seaxFsrEWC3Wm5WJxTtZco+G8SUBpzNpQaKzjN4IwpzcZv8T37Q3aREXDk/A==}
+    dependencies:
+      '@iconify/types': 1.1.0
+    dev: true
+
   /@iconify/types/1.1.0:
     resolution: {integrity: sha512-Jh0llaK2LRXQoYsorIH8maClebsnzTcve+7U3rQUSnC11X4jtPnFuyatqFLvMxZ8MLG8dB4zfHsbPfuvxluONw==}
-    dev: false
 
   /@iconify/utils/1.0.33:
     resolution: {integrity: sha512-vGeAqo7aGPxOQmGdVoXFUOuyN+0V7Lcrx2EvaiRjxUD1x6Om0Tvq2bdm7E24l2Pz++4S0mWMCVFXe/17EtKImQ==}

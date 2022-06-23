@@ -1,78 +1,87 @@
 ---
-# try also 'default' to start simple
-theme: seriph
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
-background: https://source.unsplash.com/collection/94734566/1920x1080
-# apply any windi css classes to the current slide
-class: 'text-center'
-# https://sli.dev/custom/highlighters.html
 highlighter: shiki
-# show line numbers in code blocks
+fonts:
+  mono: Input Mono
 lineNumbers: false
-# some information about the slides, markdown enabled
+favicon: 'https://filecdn.hgj.com/yunlsp/ico/yunlsp.ico'
+background: #fff;
 info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
+  ## Vue3生态技术栈安利
+
+  良好的开发体验，提高开发效率，减少心智负担，
 
   Learn more at [Sli.dev](https://sli.dev)
-# persist drawings in exports and build
-drawings:
-  persist: false
 ---
 
-# Welcome to Slidev
 
-Presentation slides for developers
+# Vue3 优雅的开发项目
 
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
-  </span>
+分享Vue3项目中好用的包及工具，提高开发效率，减少心智负担，提升开发体验，重拾开发乐趣
+
+<div class="abs-tr !mx-8 !my-8 flex flex-col bg-blue-500 dark:bg-transparent px-2 py-2 rounded">
+  <img src="//filecdn.hgj.com/public-header/hgj-logo.png" class="w-18 m-auto">
 </div>
 
-<div class="abs-br m-6 flex gap-2">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub"
-    class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon-logo-github />
-  </a>
+<div class="abs-bl !mx-14 my-12 flex flex-col">
+  <div class="mb-3 uppercase tracking-widest font-500">
+  <a href="https://www.talks.happyfly.top">跨境组 - talks</a>
+  </div>
+  <div class="text-md opacity-50">Suzhou, China 2022</div>
+
 </div>
 
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
+<style>
+p {
+  @apply text-xl;
+}
+</style>
+
+---
+layout: intro
+---
+# 跨境物流系统
+
+<div class="leading-8 opacity-80">一个基于vue3开发的多端项目<br>包括后台管理端、后台员工端<br>二级客户端（PC、 H5、小程序、公众号、<strike>App</strike>）<br>
+ </div>
+
+<div class="my-10 grid grid-cols-[40px,1fr] w-max gap-y-4 pt-24">
+  <ri-user-3-line class="opacity-50"/>
+  <div><a href="https://kj.hgj.com" target="_blank">邵富旺·张超烨·王源·陈成·陶翔·<strike>陈颜颜·张辉·?·?</strike></a></div>
+  <ri-download-line class="opacity-50"/>
+  <div><a href="https://www.talks.happyfly.top" target="_blank">www.talks.happyfly.top</a></div>
+</div>
+<img src="https://filecdn.hgj.com/hnp-shop-admin/official/home/banner/core-feature@2x.png" class="rounded-xl w-100 abs-tr mt-16 mr-12"/>
+
+---
+layout: center
+class: text-center
+---
+
+# Vue3用啥包管理器好呢？
+
+npm or yarn ？
 
 ---
 
-# What is Slidev?
+# 都可以，更推荐使用pnpm
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+Fast, disk space efficient package manager
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
 
-<br>
-<br>
-
-Read more about [Why Slidev?](https://sli.dev/guide/why)
-
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/guide/syntax#embedded-styles
--->
+- 磁盘空间利用非常高效
+> pnpm 内部使用基于内容寻址的文件系统来存储磁盘上所有的文件, 不会重复安装同一个包
+- 包安装速度极快
+> 因为下载包的数量与下载速度成正比，包少了当然快
+- 支持monorepo
+> 用一个 git 仓库来管理多个子项目，所有的子项目都存放在根目录的packages目录下，那么一个子项目就代表一个package, 可替代<a href="https://github.com/lerna/lerna#readme">lerna</a>，
+常用UI组件库如<a href="https://github.com/element-plus/element-plus">ElementPlus</a>等都已使用了pnpm进行包管理，使用其monorepo特性维护子包。
+- 安全性高
+> npm/yarn 的时候，由于 node_module 的扁平结构, 可能会导致某些包的依赖关系不能被正确解析，会出现这种非法访问的情况, 而pnpm 使用软链的方式将项目的直接依赖添加进模块文件夹的根目录，避免了这种情况。
 
 <style>
 h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-color: #eeaf3d;
+  background-image: linear-gradient(45deg, #4e4e4e 10%, #eeaf3d 20%);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -80,6 +89,100 @@ h1 {
   -moz-text-fill-color: transparent;
 }
 </style>
+
+---
+
+# 不同的包管理器如何切换?
+
+推荐安装<a href="https://github.com/antfu/ni"> antfu/ni </a>包，可以识别当前项目所使用的的包管理器，并且可以自动切换到相应的包管理器，抹平不同的包管理器的命令差异，运行相应的脚本
+
+```js
+npm i -g @antfu/ni
+
+```
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+# Nodejs版本如何切换?
+
+macos 使用 <a href="https://github.com/nvm-sh/nvm">nvm</a>
+<br>
+windows 使用 <a href="https://github.com/coreybutler/nvm-windows"> nvm-windows</a>
+
+```js
+npm i -g nvm
+
+```
+
+---
+layout: center
+class: text-center
+---
+
+# vue3用啥工具链/脚手架？
+
+能用vite就用vite, 次之也最好升级到vue-cli5或webpack5
+
+---
+layout: center
+class: text-center
+---
+
+# 如何优雅的导入包？
+全量引入 or 按需引入？
+
+---
+layout: center
+class: text-center
+---
+
+# 如何优雅的使用Composition API？
+看看vueuse是如何实现的
+
+---
+layout: center
+class: text-center
+---
+
+# 如何优雅的进行状态管理？
+vuex4 ?
+
+---
+layout: center
+class: text-center
+---
+
+
+# 如何优雅的使用svg组件和icon图标？
+iconfont or svgIcon ?
+
+---
+layout: center
+class: text-center
+---
+
+# 我想要在项目中使用CSS原子化引擎
+tailwinds or windicss ?
+
+---
+layout: center
+class: text-center
+---
+
+# 我的项目要求SSR
+nuxt3不二之选
+
+---
+layout: center
+class: text-center
+---
+
+# 你以上说的我都接受，但我不想配置
+有现成的项目模板？
 
 ---
 
@@ -284,6 +387,10 @@ const final = {
 
 </div>
 
+<!--
+asdfdsaf
+-->
+
 ---
 
 # LaTeX
@@ -311,6 +418,10 @@ $$
 <br>
 
 [Learn more](https://sli.dev/guide/syntax#latex)
+
+<!--
+sadfdsafdsafsdfsdafsdafdsf
+-->
 
 ---
 
