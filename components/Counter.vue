@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-
+import { ref, unref, computed } from 'vue'
+import type { Ref } from 'vue'
 const props = defineProps({
   count: {
     default: 0,
@@ -8,9 +8,19 @@ const props = defineProps({
 })
 
 const counter = ref(props.count)
+function add(
+  a: Ref<number> | number,
+  b: Ref<number> | number
+) {
+  return computed(() => unref(a) + unref(b))
+}
+const a = ref(1)
+const b = 2
+const count = add(counter, b)
 </script>
 
 <template>
+  {{ count}}
   <div flex="~" w="min" border="~ gray-400 opacity-50 rounded-md">
     <button
       border="r gray-400 opacity-50"
@@ -33,5 +43,6 @@ const counter = ref(props.count)
     >
       +
     </button>
+    
   </div>
 </template>

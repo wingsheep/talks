@@ -1,17 +1,25 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@iconify-json/ic': ^1.1.6
+  '@iconify-json/mdi': ^1.1.24
   '@iconify-json/ri': ^1.1.2
   '@slidev/cli': ^0.33.0
   '@slidev/theme-default': '*'
   '@slidev/theme-seriph': '*'
+  pinia: ^2.0.14
+  pinia-plugin-persistedstate: ^1.6.1
 
 dependencies:
   '@slidev/cli': 0.33.1
   '@slidev/theme-default': 0.21.2
   '@slidev/theme-seriph': 0.21.2
+  pinia: 2.0.14
+  pinia-plugin-persistedstate: 1.6.1_pinia@2.0.14
 
 devDependencies:
+  '@iconify-json/ic': 1.1.6
+  '@iconify-json/mdi': 1.1.24
   '@iconify-json/ri': 1.1.2
 
 packages:
@@ -48,6 +56,18 @@ packages:
     dependencies:
       '@iconify/types': 1.1.0
     dev: false
+
+  /@iconify-json/ic/1.1.6:
+    resolution: {integrity: sha512-l5wTHkRBPXoZa9kB/KXgbd5NH9oNh3fxTU936mwSHm60HEN8PvbSHxAuEUmF9RsLOLoDE9loZCc3RBO5RzrxCg==}
+    dependencies:
+      '@iconify/types': 1.1.0
+    dev: true
+
+  /@iconify-json/mdi/1.1.24:
+    resolution: {integrity: sha512-pWz37BD5NmuNlWe5g7bnL5JhlDsbAzhm60H1XBlQWeuxT3ksfTdka99lLOl7RgWzfv54ff44BDuRT0bt2RhlVg==}
+    dependencies:
+      '@iconify/types': 1.1.0
+    dev: true
 
   /@iconify-json/ph/1.1.1:
     resolution: {integrity: sha512-sIHTY+c1F8x29BM49IqoccJ3T8mvVXPcrE4WOpJ3GsBaip2YqFJRYU60rw64UL6GEI13vWSD7NsZKq8ytTO87g==}
@@ -1958,6 +1978,30 @@ packages:
     engines: {node: '>=8.6'}
     dev: false
 
+  /pinia-plugin-persistedstate/1.6.1_pinia@2.0.14:
+    resolution: {integrity: sha512-4re0ZO5KgqDnSNWX2RhJVIsIYvH+uaEGTN+UOx34mb7fVoE8A3CfB9QhbMT3Zn7ZSBXTfT2cgI/w7cLq2zNQMw==}
+    peerDependencies:
+      pinia: ^2.0.0
+    dependencies:
+      pinia: 2.0.14
+    dev: false
+
+  /pinia/2.0.14:
+    resolution: {integrity: sha512-0nPuZR4TetT/WcLN+feMSjWJku3SQU7dBbXC6uw+R6FLQJCsg+/0pzXyD82T1FmAYe0lsx+jnEDQ1BLgkRKlxA==}
+    peerDependencies:
+      '@vue/composition-api': ^1.4.0
+      typescript: '>=4.4.4'
+      vue: ^2.6.14 || ^3.2.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      typescript:
+        optional: true
+    dependencies:
+      '@vue/devtools-api': 6.1.4
+      vue-demi: 0.13.1
+    dev: false
+
   /plantuml-encoder/1.4.0:
     resolution: {integrity: sha512-sxMwpDw/ySY1WB2CE3+IdMuEcWibJ72DDOsXLkSmEaSzwEUaYBT6DWgOfBiHGCux4q433X6+OEFWjlVqp7gL6g==}
     dev: false
@@ -2419,6 +2463,19 @@ packages:
 
   /vscode-textmate/5.2.0:
     resolution: {integrity: sha512-Uw5ooOQxRASHgu6C7GVvUxisKXfSgW4oFlO+aa+PAkgmH89O3CXxEEzNRNtHSqtXFTl0nAC1uYj0GMSH27uwtQ==}
+    dev: false
+
+  /vue-demi/0.13.1:
+    resolution: {integrity: sha512-xmkJ56koG3ptpLnpgmIzk9/4nFf4CqduSJbUM0OdPoU87NwRuZ6x49OLhjSa/fC15fV+5CbEnrxU4oyE022svg==}
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
     dev: false
 
   /vue-demi/0.13.1_vue@3.2.37:
