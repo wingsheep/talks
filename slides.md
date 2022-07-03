@@ -7,8 +7,10 @@ favicon: 'https://filecdn.hgj.com/yunlsp/ico/yunlsp.ico'
 background: #fff;
 titleTemplate: '%s - 跨境组'
 download: true
+exportFilename: 'vue3-talks.pdf'
+
 info: |
-  ## Vue3生态技术栈安利
+  ## Vue3 优雅的开发项目 
 
   分享Vue3项目中好用的包及工具，提高开发效率，减少心智负担，提升开发体验，重拾开发乐趣
 

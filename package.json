@@ -2,7 +2,7 @@
   "name": "vue3ecosystemshare",
   "private": true,
   "scripts": {
-    "build": "slidev build",
+    "build": "slidev build --download",
     "dev": "slidev --open",
     "export": "slidev export"
   },
