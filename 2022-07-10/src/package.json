@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build --base /2022/vue3-ecosystem/ --out ../../dist/2022/vue3-ecosystem",
+    "export": "slidev export --dark --output ../2022-07-10-vue3-ecosystem.pdf"
+  }
+}

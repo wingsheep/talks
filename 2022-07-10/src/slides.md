@@ -6,8 +6,6 @@ lineNumbers: false
 favicon: 'https://filecdn.hgj.com/yunlsp/ico/yunlsp.ico'
 background: #fff;
 titleTemplate: '%s - 跨境组'
-download: false
-exportFilename: 'vue3-talks.pdf'
 
 info: |
   ## Vue3 优雅的开发项目 
@@ -50,7 +48,7 @@ layout: intro
   <ri-user-3-line class="opacity-50"/>
   <div><a href="https://kj.hgj.com" target="_blank">邵富旺·张超烨·王源·陈成·陶翔·<strike>陈颜颜·张辉·?·?</strike></a></div>
   <ri-download-line class="opacity-50"/>
-  <div><a href="https://www.talks.happyfly.top" target="_blank">www.talks.happyfly.top</a></div>
+  <div><a href="https://www.talks.happyfly.top/2022/vue3-ecosystem" target="_blank">www.talks.happyfly.top</a></div>
 </div>
 <img src="https://filecdn.hgj.com/hnp-shop-admin/official/home/banner/core-feature@2x.png" class="rounded-xl w-100 abs-tr mt-16 mr-12"/>
 
