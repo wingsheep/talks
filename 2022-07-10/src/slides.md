@@ -6,14 +6,13 @@ lineNumbers: false
 favicon: 'https://filecdn.hgj.com/yunlsp/ico/yunlsp.ico'
 background: #fff;
 titleTemplate: '%s - 跨境组'
-
+download: 'https://github.com/wingsheep/talks/raw/master/2022-07-10/2022-07-10-vue3-ecosystem.pdf'
 info: |
   ## Vue3 优雅的开发项目 
 
   分享Vue3项目中好用的包及工具，提高开发效率，减少心智负担，提升开发体验，重拾开发乐趣
 
 ---
-
 # Vue3 优雅的开发项目
 
 分享Vue3项目中好用的包及工具，提高开发效率，减少心智负担，提升开发体验，重拾开发乐趣
@@ -24,7 +23,10 @@ info: |
 
 <div class="abs-bl !mx-14 my-12 flex flex-col">
   <div class="mb-3 uppercase tracking-widest font-500">
-  <a href="https://www.talks.happyfly.top">跨境组 - talks</a>
+      <a  target="__blank" title="项目源码" href="https://github.com/wingsheep/talks">
+      <ri-github-line class="opacity-50"/>
+      跨境组 - talks
+    </a>
   </div>
   <div class="text-md opacity-50">Suzhou, China 2022</div>
 
@@ -48,9 +50,15 @@ layout: intro
   <ri-user-3-line class="opacity-50"/>
   <div><a href="https://kj.hgj.com" target="_blank">邵富旺·张超烨·王源·陈成·陶翔·<strike>陈颜颜·张辉·?·?</strike></a></div>
   <ri-download-line class="opacity-50"/>
-  <div><a href="https://www.talks.happyfly.top/2022/vue3-ecosystem" target="_blank">www.talks.happyfly.top</a></div>
+  <div><a href="https://github.com/wingsheep/talks/raw/master/2022-07-10/2022-07-10-vue3-ecosystem.pdf" target="_blank">talks.happyfly.top/2022/vue3-ecosystem</a></div>
 </div>
 <img src="https://filecdn.hgj.com/hnp-shop-admin/official/home/banner/core-feature@2x.png" class="rounded-xl w-100 abs-tr mt-16 mr-12"/>
+
+---
+
+# 快速浏览
+
+<CustomToc />
 
 ---
 layout: center
@@ -75,7 +83,7 @@ Fast, disk space efficient package manager
 > 因为下载包的数量与下载速度成正比，包少了当然快
 - 支持monorepo
 > 用一个 git 仓库来管理多个子项目，所有的子项目都存放在根目录的packages目录下，那么一个子项目就代表一个package, 可替代<a href="https://github.com/lerna/lerna#readme">lerna</a>，
-常用UI组件库如<a href="https://github.com/element-plus/element-plus">ElementPlus</a>等都已使用了pnpm进行包管理，使用其monorepo特性维护子包。
+常用UI组件库如<a href="https://github.com/element-plus/element-plus">ElementPlus</a>等都已使用了pnpm monorepo特性进行包管理。本次  <a  target="__blank" title="项目源码" href="https://github.com/wingsheep/talks">Talk</a> 源码即monorepo，感兴趣的同学可以访问
 - 安全性高
 > npm/yarn 的时候，由于 node_module 的扁平结构, 可能会导致某些包的依赖关系不能被正确解析，会出现这种非法访问的情况, 而pnpm 使用软链的方式将项目的直接依赖添加进模块文件夹的根目录，避免了这种情况。
 
@@ -391,12 +399,7 @@ export default defineConfig({
 ```ts
 <script lang="ts" setup>
 import { useAttrs, computed } from 'vue'
-const props = defineProps({
-   icon: {
-      type: String,
-      default: '',
-    },
-})
+const { icon } = defineProps<{icon: string}>()
 const attrs = useAttrs()
 const isUni = computed(() => Object.keys(attrs).includes('uni') || attrs?.iconType === 'uni')
 const isSvg = computed(() => Object.keys(attrs).includes('svg') || attrs?.iconType === 'svg')
@@ -405,18 +408,19 @@ const isSvg = computed(() => Object.keys(attrs).includes('svg') || attrs?.iconTy
 
 ```html
 <template>
-  <i v-if="isUni" class='iconfont' v-bind="$attrs">{{ props.icon }}</i>
+  <i v-if="isUni" class='iconfont' v-bind="$attrs">{{ icon }}</i>
   <svg v-else-if="isSvg" class="icon-svg" aria-hidden>
-    <use :xlink:href="`#${props.icon}`"></use>
+    <use :xlink:href="`#${icon}`"></use>
   </svg>
-  <i v-else class="iconfont" v-bind="$attrs" :class="props.icon"></i>
+  <i v-else class="iconfont" v-bind="$attrs" :class="icon"></i>
 </template>
 ```
 
 ###### 我是👇🏻的图标 <Iconfont uni icon="&#xe9a2;" /> <Iconfont uni icon="&#xe9a2;" />
 
 ```html
-<Iconfont uni icon="&#xe9a2;" />  <Iconfont icon="iconxiadan" />
+<Iconfont uni icon="&#xe9a2;" />
+<Iconfont icon="iconxiadan" />
 
 ```
 
@@ -648,42 +652,80 @@ layout: center
 class: text-center
 ---
 
-# 我的项目要求SSR
+# 我的项目要求SSR/SSG
 nuxt3不二之选
 
 ---
 
 # Nuxt3
 
-Nuxt 3 的重构精简了内核，并且让速度更快，开发体验更好。
+Nuxt 3 的重构精简了内核，并且让速度更快，开发体验更好
 
 - 开发更快
-> 用动态服务端代码分割来优化冷启动，由 nitro 引擎提供能力。
+> 用动态服务端代码分割来优化冷启动，由 nitro 引擎提供能力
 
 - 更轻量
-> 以现代浏览器为目标的情况下，服务器部署和客户端产物最多可达 75 倍的减小。
+> 以现代浏览器为目标的情况下，服务器部署和客户端产物最多可达 75 倍的减小
 
 - Hybrid
-> 增量静态生成和其他高级模式现在都成为可能。
+> 增量静态生成和其他高级模式现在都成为可能
 
 - Suspense
-> 导航前后皆任何组件中获取数据。
+> 导航前后皆任何组件中获取数据
 
 - Composition API
-> 使用 Composition API 和 Nuxt 3 的 composables 实现真正的可复用性。
+> 使用 Composition API 和 Nuxt 3 的 composables 实现真正的可复用性
+
+---
 
 - Nuxt CLI
-> 更多的信息和快速修复，在浏览器中高效工作。
+> 更多的信息和快速修复，在浏览器中高效工作
 
 - Nuxt Kit
-> 全新的基于 TypeScript 和跨版本兼容的模块开发。
+> 全新的基于 TypeScript 和跨版本兼容的模块开发
+
+- Webpack 5
+> 更快的构建速度和更小的构建产物，并且零配置
+
+- Vite
+>用 Vite 作为你的打包器，体验轻量级的快速 HMR。
+
+- Vue3
+> vue3会成为您下一个应用的坚实基础。
+
+- TypeScript
+> 由原生 TypeScript 和 ESM 构成，没有额外的步骤。
+
+---
+
+# Nuxt3 服务器引擎 “Nitor”
+
+- 跨平台支持Node.js、浏览器、service-worker等
+- 支持Serverless 开箱即用
+- 约定式路由
+- 自动代码分割，异步加载模块
+- 静态 +服务器站点的混合模式
+- 热重载的开发服务器
+
+<br>
+<br>
+<br>
+<br>
+
+> <a target="__blank" href="https://vitesse-nuxt3.netlify.app/">Nuxt3 app demo</a> <br>
+> <a target="__blank" href="https://github.com/antfu/vitesse-nuxt3">Nuxt3 app demo 源码</a>
+
+<br>
+
+> 如果只是想要写个SSG静态站点文档，那么还可以选择 <a target="__blank" href="https://vitepress.vuejs.org/">Vitepress</a>  （VitePress is VuePress' little brother, built on top of Vite.）
+
 
 ---
 layout: center
 class: text-center
 ---
 
-# 你以上说的我都接受，但我不想配置
+# 你以上说的我大多接受，但我并不想配置
 有现成的项目模板？
 
 ---
@@ -712,6 +754,7 @@ class: text-center
 
 <ul>
 <li><a href="https://marketplace.visualstudio.com/items?itemName=Vue.volar">volar</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=antfu.iconify">iconify</a></li>
 <li> <a href="https://marketplace.visualstudio.com/items?itemName=Lokalise.i18n-ally">il8n-ally</a></li>
 <li><a href="https://marketplace.visualstudio.com/items?itemName=antfu.unocss">unocss</a></li>
 <li><a href="https://marketplace.visualstudio.com/items?itemName=voorjaar.windicss-intellisense">windicss-intellisense</a></li>
@@ -719,10 +762,12 @@ class: text-center
 
 
 <ul>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
+  <li><a href="https://juejin.cn/post/6932046455733485575">关于现代包管理器的深度思考</a></li>
+  <li>
+  <a href="https://antfu.me/posts/reimagine-atomic-css-zh">重新构想原子化 CSS</a>
+  </li>
+  <li><a href="https://talks.antfu.me/2021/vueconf-china/1">vue函数的最佳实践与技巧</a></li>
+  <li><a href="https://item.jd.com/10044386076478.html">Vue.js设计与实现</a></li>
 </ul>
 
 </div>
