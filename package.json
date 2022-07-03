@@ -16,6 +16,7 @@
   "devDependencies": {
     "@iconify-json/ic": "^1.1.6",
     "@iconify-json/mdi": "^1.1.24",
-    "@iconify-json/ri": "^1.1.2"
+    "@iconify-json/ri": "^1.1.2",
+    "playwright-chromium": "^1.23.1"
   }
 }

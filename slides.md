@@ -6,11 +6,11 @@ lineNumbers: false
 favicon: 'https://filecdn.hgj.com/yunlsp/ico/yunlsp.ico'
 background: #fff;
 titleTemplate: '%s - 跨境组'
-download: false
+download: true
 info: |
   ## Vue3生态技术栈安利
 
-  良好的开发体验，提高开发效率，减少心智负担，
+  分享Vue3项目中好用的包及工具，提高开发效率，减少心智负担，提升开发体验，重拾开发乐趣
 
 ---
 
@@ -349,6 +349,10 @@ export default defineConfig({
 
 ```
 
+<!--
+你说的都对 我不改
+-->
+
 ---
 
 ```ts
@@ -562,6 +566,7 @@ export const useTodos = defineStore('todos', {
 ```
 
 ---
+
   
 ```ts
   /**
@@ -650,7 +655,28 @@ nuxt3不二之选
 
 # Nuxt3
 
-NUXT的目标是使Web开发直观和表现良好，并考虑出色的开发人员体验。
+Nuxt 3 的重构精简了内核，并且让速度更快，开发体验更好。
+
+- 开发更快
+> 用动态服务端代码分割来优化冷启动，由 nitro 引擎提供能力。
+
+- 更轻量
+> 以现代浏览器为目标的情况下，服务器部署和客户端产物最多可达 75 倍的减小。
+
+- Hybrid
+> 增量静态生成和其他高级模式现在都成为可能。
+
+- Suspense
+> 导航前后皆任何组件中获取数据。
+
+- Composition API
+> 使用 Composition API 和 Nuxt 3 的 composables 实现真正的可复用性。
+
+- Nuxt CLI
+> 更多的信息和快速修复，在浏览器中高效工作。
+
+- Nuxt Kit
+> 全新的基于 TypeScript 和跨版本兼容的模块开发。
 
 ---
 layout: center
@@ -737,4 +763,3 @@ VueUse, Slidev, Type Challenges 等项目创作者<br>
 </div>
 
 <img src="https://antfu.me/avatar.png" class="rounded-full w-40 abs-tr mt-16 mr-12"/>
-
