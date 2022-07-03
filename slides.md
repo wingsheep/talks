@@ -6,7 +6,7 @@ lineNumbers: false
 favicon: 'https://filecdn.hgj.com/yunlsp/ico/yunlsp.ico'
 background: #fff;
 titleTemplate: '%s - 跨境组'
-download: true
+download: false
 exportFilename: 'vue3-talks.pdf'
 
 info: |
