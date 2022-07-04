@@ -8,5 +8,6 @@
     <li><Link to="23">全局数据状态管理</Link></li>
     <li><Link to="29">CSS原子化引擎</Link></li>
     <li><Link to="32">SSR/SSG</Link></li>
+    <li><Link to="35">单元测试框架</Link></li>
   </ul>
 </template>

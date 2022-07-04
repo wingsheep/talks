@@ -13,6 +13,7 @@ info: |
   分享Vue3项目中好用的包及工具，提高开发效率，减少心智负担，提升开发体验，重拾开发乐趣
 
 ---
+
 # Vue3 优雅的开发项目
 
 分享Vue3项目中好用的包及工具，提高开发效率，减少心智负担，提升开发体验，重拾开发乐趣
@@ -60,6 +61,14 @@ layout: intro
 
 <CustomToc />
 
+<br>
+<br>
+<br>
+<br>
+<br>
+
+> 👴🏻想要提前看看问了哪些问题，问题藏在了本次PPT源码里了哦，欢迎访问👏🏻👻👻👻
+
 ---
 layout: center
 class: text-center
@@ -85,7 +94,7 @@ Fast, disk space efficient package manager
 > 用一个 git 仓库来管理多个子项目，所有的子项目都存放在根目录的packages目录下，那么一个子项目就代表一个package, 可替代<a href="https://github.com/lerna/lerna#readme">lerna</a>，
 常用UI组件库如<a href="https://github.com/element-plus/element-plus">ElementPlus</a>等都已使用了pnpm monorepo特性进行包管理。本次  <a  target="__blank" title="项目源码" href="https://github.com/wingsheep/talks">Talk</a> 源码即monorepo，感兴趣的同学可以访问
 - 安全性高
-> npm/yarn 的时候，由于 node_module 的扁平结构, 可能会导致某些包的依赖关系不能被正确解析，会出现这种非法访问的情况, 而pnpm 使用软链的方式将项目的直接依赖添加进模块文件夹的根目录，避免了这种情况。
+> npm/yarn 的时候，由于 node_module 的扁平结构, 可能会导致某些包的依赖关系不能被正确解析，会出现这种非法访问的情况, 而pnpm 使用软链的方式将项目的直接依赖添加进模块文件夹的根目录，避免了这种情况
 
 </v-clicks>
 
@@ -284,7 +293,7 @@ iconfont or svgIcon ?
 
 # 看看组件库是怎么设计icon的
 
-通用做法是将icon组件化，如下ElementPlusIcon全局导入后，
+通用做法是将icon组件化，如下ElementPlusIcon全局导入
 
 ```ts
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
@@ -307,7 +316,7 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 ---
 
 # 本地的svg图标集应该如何配合使用
-vite可以借助vite-svg-loader引入svg组件，webpack5也可以配置assetModule引入svg组件，
+vite可以借助vite-svg-loader引入svg组件，webpack5也可以配置assetModule引入svg组件
 
 ```ts
 // vite 配置 vite-svg-loader
@@ -356,10 +365,6 @@ export default defineConfig({
     }),
 
 ```
-
-<!--
-你说的都对 我不改
--->
 
 ---
 
@@ -436,7 +441,7 @@ class: text-center
 
 # VueUse
 
-VueUse是一个基于Composition API的实用函数集合。
+VueUse是一个基于Composition API的实用函数集合
 
 - 同时兼容 Vue 2 和 Vue 3
 - Tree-shakeable ESM
@@ -489,7 +494,7 @@ export function useDark(options: UseDarkOptions = {}) {
 
 # 建立"连结"
 
-不同于 React，Vue 的 `setup()` 只会在组件建立时执行**一次**，并建立数据与逻辑之间的连结。
+不同于 React，Vue 的 `setup()` 只会在组件建立时执行**一次**，并建立数据与逻辑之间的连结
 
 - 建立 输入 → 输出 的连结
 - 输出会自动根据输入的改变而改变
@@ -515,7 +520,7 @@ layout: center
 class: text-center
 ---
 
-对于全局的数据状态管理，按照VueUse结合Composition API设计思路，composables函数属性共享，已然支持状态管理，但是像vuex一样，我们需要封装一些好用的API才能适用于大的项目。<br>无需担心，Pinia 已经帮我们做了这件事情。
+对于全局的数据状态管理，按照VueUse结合Composition API设计思路，composables函数属性共享，已然支持状态管理，但是像vuex一样，我们需要封装一些好用的API才能适用于大的项目。<br>无需担心，Pinia 已经帮我们做了这件事情
 
 ---
 
@@ -641,7 +646,7 @@ tailwinds or windicss ?
 UnoCSS 可以比 Tailwind 的 JIT 引擎快 200 倍
 
 - 跳过解析，不使用 AST
-  > 从内部实现上看，Tailwind 依赖于 PostCSS 的 AST 进行修改，而 Windi 则是编写了一个自定义解析器和 AST。考虑到在开发过程中，这些工具 CSS 的并不经常变化，UnoCSS 通过非常高效的字符串拼接来直接生成对应的 CSS 而非引入整个编译过程。同时，UnoCSS 对类名和生成的 CSS 字符串进行了缓存，当再次遇到相同的实用工具类时，它可以绕过整个匹配和生成的过程。
+  > 从内部实现上看，Tailwind 依赖于 PostCSS 的 AST 进行修改，而 Windi 则是编写了一个自定义解析器和 AST。考虑到在开发过程中，这些工具 CSS 的并不经常变化，UnoCSS 通过非常高效的字符串拼接来直接生成对应的 CSS 而非引入整个编译过程。同时，UnoCSS 对类名和生成的 CSS 字符串进行了缓存，当再次遇到相同的实用工具类时，它可以绕过整个匹配和生成的过程
 
 
 - 单次迭代
@@ -688,13 +693,13 @@ Nuxt 3 的重构精简了内核，并且让速度更快，开发体验更好
 > 更快的构建速度和更小的构建产物，并且零配置
 
 - Vite
->用 Vite 作为你的打包器，体验轻量级的快速 HMR。
+>用 Vite 作为你的打包器，体验轻量级的快速 HMR
 
 - Vue3
 > vue3会成为您下一个应用的坚实基础。
 
 - TypeScript
-> 由原生 TypeScript 和 ESM 构成，没有额外的步骤。
+> 由原生 TypeScript 和 ESM 构成，没有额外的步骤
 
 ---
 
@@ -718,6 +723,81 @@ Nuxt 3 的重构精简了内核，并且让速度更快，开发体验更好
 <br>
 
 > 如果只是想要写个SSG静态站点文档，那么还可以选择 <a target="__blank" href="https://vitepress.vuejs.org/">Vitepress</a>  （VitePress is VuePress' little brother, built on top of Vite.）
+
+
+---
+layout: center
+class: text-center
+---
+
+# 我写了还不错的包，用什么测试好呢？
+Jest?
+
+---
+
+# 我要更快，那么请选择Vitest
+Vitest 是一个由 Vite 提供支持的极速单元测试框架
+
+<div class="grid grid-cols-2 gap-x-4 gap-y-4">
+
+- 与 Vite 通用的配置、转换器、解析器和插件
+- 使用你的应用程序中的相同配置来进行测试
+- 智能文件监听模式，就像是测试的 HMR
+- 支持测试 Vue、React、Lit 等框架中的组件
+- 开箱即用的 TypeScript / JSX 支持
+- ESM 优先，支持模块顶级 await
+- 通过tinypool使用Worker线程尽可能多地并发运行
+- 套件和测试的过滤、超时、并发配置
+
+<div>
+
+- Jest 的快照功能
+- 内置 Chai 进行断言 + 与Jest expect语法兼容的API
+- 内置用于对象模拟(Mock)的 Tinyspy
+- 使用 jsdom 或 happy-dom 用于 DOM 模拟
+- 通过 c8 来输出代码测试覆盖率
+- 类似于 Rust 语言的 源码内联测试
+
+</div>
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+> <a href="https://vitest.new">Vitest Demo</a>
+
+<style>
+h1 {
+  background-color: #789f38;
+  background-image: linear-gradient(45deg, #789f38 20%, #fbc84a 30%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+---
+
+### 对比Jest框架
+> <a target="__blank" href="https://github.com/sodatea/vite-jest#readme">vite-jest</a>提供了一套跟 Vite 集成的 Jest，所以 Jest 也是 Vite 生态下单元测试框架的可选项。但是vitest还支持非vite运行的项目。 简单来说， Vitest 与大多数 Jest API 和生态系统库都有较好的兼容性，可以无缝的将 Jest 替换成 Vitest，但由于vitest的即时热重载，更快的运行速度，开发体验会有飞跃的提升
+
+<br>
+
+### Vitest Ui
+> Vitest在运行测试时有一个开发服务器，因此Vitest可以提供如下这样的 UI 界面来查看并与测试交互
+
+<div class="h-76 overflow-auto">
+<img class="w-200" src="/vitestui.png" />
+</div>
+
 
 
 ---
