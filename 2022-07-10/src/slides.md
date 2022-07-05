@@ -503,7 +503,7 @@ export function useDark(options: UseDarkOptions = {}) {
   <Connections v-click class="mt-4"/>
   <div v-click class="p-4">
     <h3 class="pb-2">Excel 中的公式</h3>
-    <img class="h-40" src="https://cdn.wallstreetmojo.com/wp-content/uploads/2019/01/Division-Formula-in-Excel-Example-1-1.png">
+    <img class="h-40" src="/excel-example.png">
   </div>
 </div>
 
