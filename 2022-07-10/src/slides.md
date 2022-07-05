@@ -150,7 +150,7 @@ class: text-center
 ---
 
 # vite
-又快有稳，插件完善
+又快又稳，插件完善
 
 <v-clicks :every='2'>
 
