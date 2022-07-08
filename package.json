@@ -2,6 +2,7 @@
   "name": "talks",
   "private": true,
   "scripts": {
+    "dev": "pnpm run -C 2022-07-10/src dev",
     "build": "rimraf dist && pnpm -r run build"
   },
   "dependencies": {

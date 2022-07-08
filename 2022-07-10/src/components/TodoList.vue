@@ -11,6 +11,7 @@ const addItem = () => {
   }
   newVal.value = ''
 }
+
 const deleteItem = item => {
   useTodos().deleteTodo(item)
 }

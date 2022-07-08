@@ -615,13 +615,13 @@ class: text-center
 tailwinds or windicss ?
 ---
 
-# vite构建推荐<span  style="color: #666666">UnoCSS</span>/其他构建推荐<span style="color: #53baec">Windicss</span>
+# 推荐使用UnoCSS
 性能强且极具灵活性的即时原子化 CSS 引擎, 可以认为是 Windi CSS 团队的一个激进的实验, 现在版本已稳定
 
 - 引擎
   > UnoCSS 是一个引擎，而非一款框架，所有功能可以通过预设和内联配置提供
 - 预设
-  > 默认的 @unocss/preset-uno 预设是一系列流行的原子化框架的 通用超集，包括了 Tailwind CSS，Windi CSS，Bootstrap，Tachyons 等
+  > 默认的 @unocss/preset-uno 预设是一系列流行的原子化框架的 通用超集，包括了 Tailwind CSS, Windi CSS, Bootstrap Tachyons 等
 - 灵活性
 
 ```html
@@ -640,6 +640,17 @@ tailwinds or windicss ?
 </button>
 ```
 
+<style>
+h1 {
+  background-color: #3ddcee;
+  background-image: linear-gradient(45deg, #666666 10%, #d1d1d1 30%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
 ---
 
 # Unocss的性能表现

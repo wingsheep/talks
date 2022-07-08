@@ -4,12 +4,18 @@ import { useVModel } from '@vueuse/core'
 const emit = defineEmits<{
   (a: string): void
 }>()
-const props = defineProps<{
+
+const props = withDefaults(defineProps<{
   value: number
   label?: string
   active?: boolean
   controls?: boolean
-}>()
+}>(), {
+  value: 0,
+  label: '',
+  active: false,
+  controls: false
+})
 
 const value = useVModel(props, 'value', emit)
 </script>
