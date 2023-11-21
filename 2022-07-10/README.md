@@ -4,28 +4,30 @@
 
 [Vue3 优雅的开发项目](https://www.talks.happyfly.top/2022/vue3-ecosystem/1)
 
+> 以下答案仅供参考，如有错误，俺不听，俺不听，打死不改👻，最终解释权归我方所有！😑😝😋
+
 ## Question 1:
 
 vue3推荐使用的包管理器是什么？
 
 - [ ] npm
 - [ ] yarn
-- [ ] pnpm
+- [x] pnpm
 
 ## Question 2:
 
 vite 使用什么预构建依赖
 
-- [ ] Esbuild
+- [x] Esbuild
 - [ ] Rollup
 
 ## Question 3:
 
 自动导入并注册组件需安装以下哪些插件?
 
-- [ ] unplugin-vue-components
+- [x] unplugin-vue-components
 
-- [ ] unplugin-auto-import
+- [x] unplugin-auto-import
 
 - [ ] unplugin-icons
 
@@ -33,18 +35,18 @@ vite 使用什么预构建依赖
 
 下面哪些选项是vueuse的设计理念
 
-- [ ] 复用逻辑，每个函数可独立使用， 专注点分离
-- [ ] 建立“连结”， 输出会自动根据输入的改变而改变
+- [x] 复用逻辑，每个函数可独立使用， 专注点分离
+- [x] 建立“连结”， 输出会自动根据输入的改变而改变
 
 ## Question 5:
 
 Pinia 相比于vuex4的优点有以下哪些？
 
-- [ ] 可靠的TS类型推断支持
-- [ ] 支持插件化，可实现事务，同步本地存储
-- [ ] Api简节，打包体积小
+- [x] 可靠的TS类型推断支持
+- [x] 支持插件化，可实现事务，同步本地存储
+- [x] Api简节，打包体积小
 
 ## Unocss 是引擎还是框架？
 
-- [ ] 引擎
+- [x] 引擎
 - [ ] 框架
