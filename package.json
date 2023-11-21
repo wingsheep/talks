@@ -2,7 +2,6 @@
   "name": "talks",
   "private": true,
   "scripts": {
-    "dev": "pnpm run -C 2022-07-10/src dev",
     "build": "rimraf dist && pnpm -r run build"
   },
   "dependencies": {
@@ -14,6 +13,7 @@
     "@slidev/cli": "^0.28.5",
     "@slidev/theme-default": "^0.21.1",
     "@slidev/theme-seriph": "*",
+    "playwright-chromium": "^1.18.1",
     "pnpm": "^6.30.0",
     "rimraf": "^3.0.2"
   }

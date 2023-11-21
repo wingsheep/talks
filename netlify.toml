@@ -11,3 +11,8 @@
   from = "/2022/vue3-ecosystem/*"
   to = "/2022/vue3-ecosystem/index.html"
   status = 200
+
+[[redirects]]
+  from = "/2023/rank-promotion/*"
+  to = "/2023/rank-promotion/index.html"
+  status = 200
