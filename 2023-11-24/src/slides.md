@@ -6,11 +6,11 @@ lineNumbers: false
 favicon: 'https://filecdn.hgj.com/yunlsp/ico/yunlsp.ico'
 background: #fff;
 titleTemplate: '%s - 货车组'
-download: 'https://github.com/wingsheep/talks/raw/master/2022-07-10/2023-11-24-rank-promotion.pdf'
+download: 'https://github.com/wingsheep/talks/raw/master/2023-11-24/2023-11-24-rank-promotion.pdf'
 info: |
   ## 陶翔 - 货车定位前端开发
 
-  职级晋升述职
+  2023海管家职级晋升述职
 
 ---
 
@@ -28,7 +28,7 @@ info: |
       <ri-github-line class="opacity-50"/>
       Source
     </a>
-     <a  target="_blank" title="项目源码" href="https://github.com/wingsheep/talks/raw/master/2022-07-10/2023-11-24-rank-promotion.pdf">
+     <a  target="_blank" title="项目源码" href="https://github.com/wingsheep/talks/raw/master/2023-11-24/2023-11-24-rank-promotion.pdf">
       <ri-download-line class="opacity-50"/>
       Download
     </a>
