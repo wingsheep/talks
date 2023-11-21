@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build --base /2023/rank-promotion/ --out ../../dist/2023/rank-promotion",
+    "export": "slidev export --dark --output ../2023-11-24-rank-promotion.pdf"
+  }
+}
