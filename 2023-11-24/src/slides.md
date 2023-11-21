@@ -6,7 +6,7 @@ lineNumbers: false
 favicon: 'https://filecdn.hgj.com/yunlsp/ico/yunlsp.ico'
 background: #fff;
 titleTemplate: '%s - 货车组'
-download: ''
+download: 'https://github.com/wingsheep/talks/raw/master/2022-07-10/2023-11-24-rank-promotion.pdf'
 info: |
   ## 陶翔 - 货车定位前端开发
 
@@ -24,9 +24,13 @@ info: |
 
 <div class="abs-bl !mx-14 my-12 flex flex-col">
   <div class="mb-3 uppercase tracking-widest font-500">
-      <a  target="_blank" title="项目源码" href="https://github.com/wingsheep/talks">
+      <a class="mr-4" target="_blank" title="项目源码" href="https://github.com/wingsheep/talks">
       <ri-github-line class="opacity-50"/>
-      GitHub - talks
+      Source
+    </a>
+     <a  target="_blank" title="项目源码" href="https://github.com/wingsheep/talks/raw/master/2022-07-10/2023-11-24-rank-promotion.pdf">
+      <ri-download-line class="opacity-50"/>
+      Download
     </a>
   </div>
   <div class="text-md opacity-50">Suzhou, China 2023</div>
@@ -94,7 +98,7 @@ click T "/17"
 ```
 
 <style>
-  .mermaid /deep/ foreignObject div {
+  :deep(.mermaid) foreignObject div {
     line-height: 24px;
   }
 </style>
