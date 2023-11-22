@@ -68,9 +68,13 @@ M --> L(Cosbrowser)
 M --> P(Code Var)
 M --> Q(AI语音识别&词义解析)
 M --> S(推送脚本)
-B --> |"2023-11 ~ ?"| Z(未来规划&思考)
-Z --> O(现有问题)
-Z --> T(解决方案)
+B --> |"2023-11 ~ ?"| Z(思考&反思)
+Z --> V(当前短板)
+Z --> U(当前优势)
+Z --> GH(未来规划)
+GH --> WT(协作问题)
+GH --> JN(项目问题)
+
 click B "./4"
 click C "./5"
 click D "./8"
@@ -91,8 +95,12 @@ click P "./13"
 click Q "./13"
 click S "./15"
 click Z "./16"
-click O "./17"
-click T "./17"
+click V "./17?clicks=8"
+click U "./17?clicks=8"
+click GH "./19?clicks=3"
+click WT "./20?clicks=8"
+click JN "./20?clicks=8"
+
 
 
 ```
@@ -380,7 +388,10 @@ RayCast插件， 基于有道翻译开发的变量命名插件，支持全类型
 <div class="grid grid-cols-3 gap-x-2 gap-y-2 w-200">
 
 <img v-click class="w-60 rounded-xl" src="https://cdn.jsdelivr.net/gh/wingsheep/FigureBed@master/img/news_bot.png">
-<img v-click class="w-60 rounded-xl" src="https://cdn.jsdelivr.net/gh/wingsheep/FigureBed@master/img/wechat_bot.png">
+<div v-click>
+  <img class="w-60 rounded-xl" src="https://cdn.jsdelivr.net/gh/wingsheep/FigureBed@master/img/wechat_bot.png">
+  <img class="w-60 mt-4 rounded-xl" src="https://cdn.jsdelivr.net/gh/wingsheep/FigureBed@master/img/wechat_notice_4.png">
+</div>
 <img v-click class="w-100 rounded-xl" src="https://cdn.jsdelivr.net/gh/wingsheep/FigureBed@master/img/deploy_3.png">
 
 
@@ -400,12 +411,58 @@ layout: center
 class: text-center
 ---
 
-# 未来规划&思考
-思考现有工作的一些问题与解决方案
+# 思考&反思
+反思自身的优缺点以及思考现有项目存在的一些问题
 
 ---
 
-# 现有问题
+# 当前短板
+
+<v-clicks :every='2'>
+
+
+> 喜欢通过代码来表达自己，而在沟通方面相对较弱，导致信息传递不清晰
+
+<br />
+
+> 喜欢独立工作，而不是积极参与团队合作，可能导致协作效率降低
+
+<br />
+
+> 项目讨论参与度不高，可能导致信息不完整，决策缓慢，降低团队的凝聚力
+
+</v-clicks>
+
+
+<br />
+<br />
+
+<v-clicks :every='2'>
+
+# 当前优势
+
+> 具有逻辑思维和良好的问题解决能力
+
+<br />
+
+> 有能力开发一些插件以此减轻一些重复性工作的负担，且乐于分享
+
+<br />
+
+> 具有良好的自学能力以及信息获取能力，乐于学习新技术
+
+<br />
+
+> 具有持续改进意识，不断寻求优化和效率提升
+
+<br />
+
+</v-clicks>
+
+
+---
+
+# 已知项目问题
 
 <v-clicks :every='2'>
 
@@ -422,6 +479,36 @@ class: text-center
 
 </v-clicks>
 
+
+---
+layout: center
+class: text-center
+---
+
+# 未来规划
+未来打算做哪些事情，如何落地？
+
+---
+
+# 协作问题
+
+<v-clicks :every='2'>
+
+
+> 提前深入了解项目需求，预想问题，分享经验，提高项目参与度
+
+<br />
+
+> 开发一些工具，以辅助沟通，减少信息传递不及时问题
+
+<br />
+
+> 提高耐心，多点包容，多与团队成员沟通，存档已知问题库
+
+<br />
+
+</v-clicks>
+
 <br />
 <br />
 <br />
@@ -429,7 +516,7 @@ class: text-center
 <v-clicks :every='2'>
 
 
-# 未来规划
+# 项目问题
 
 > 深入理解业务逻辑，将UI组件移除，预计将减少主包10%的体积，后续尝试升级框架，彻底解决打包问题
 
@@ -445,9 +532,52 @@ class: text-center
 
 </v-clicks>
 
+
 ---
 layout: center
 class: 'text-center pb-5 :'
 ---
 
 # 谢谢！Q & A
+
+---
+layout: center
+class: 'text-center pb-5 :'
+---
+
+<h1 class="pl-6"> 彩蛋！ 感谢大佬开源！</h1>
+
+大佬最近在 [YOUTUBE](https://www.youtube.com/watch?v=49WXr6kVBVI) 直播写Nuxt Playground
+
+---
+
+# Anthony Fu
+
+<div class="leading-8 opacity-80">
+Vue·Vite·Nuxt 核心团队成员<br>
+VueUse, Slidev, Type Challenges 等项目创作者<br>
+</div>
+
+<div class="my-10 grid grid-cols-[40px,1fr] w-max gap-y-4">
+  <ri-github-line class="opacity-50"/>
+  <div><a href="https://github.com/antfu" target="_blank">antfu</a></div>
+  <ri-twitter-line class="opacity-50"/>
+  <div><a href="https://twitter.com/antfu7" target="_blank">antfu7</a></div>
+  <ri-user-3-line class="opacity-50"/>
+  <div><a href="https://antfu.me" target="_blank">antfu.me</a></div>
+  <ri-discord-line class="opacity-50"/>
+  <div><a href="https://antfu.me" target="_blank">Discord</a></div>
+  <ri-zhihu-line class="opacity-50"/>
+  <div><a href="https://www.zhihu.com/people/Anthony117" target="_blank">Anthony Fu</a></div>
+</div>
+
+<img src="https://antfu.me/avatar.png" class="rounded-full w-40 abs-tr mt-16 mr-12"/>
+
+---
+layout: center
+class: 'text-center pb-5 :'
+---
+
+# ONE MORE THING
+
+未来期望少写一点业务，多写一点工具
