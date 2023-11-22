@@ -47,7 +47,7 @@ p {
 
 # 内容概览
 
-```mermaid {theme: 'default', scale: 0.5}
+```mermaid {theme: 'neutral', scale: 0.5}
 graph LR
 A(自我介绍) --> |"2021-5"| B{海管家工作经历}
 B -->|"2021-5~2022-8"| C(跨境组)
